@@ -1,0 +1,22 @@
+ALGORITHM readSentence
+VAR
+    i,num_voyels:INTEGER:=0;
+    num_words:INTEGER:=1;
+    str:STRING;
+    
+BEGIN
+    Write("Type your sentence here !");
+    Read(str);
+    WHILE (str[i]<>".") DO
+        IF (str[i]=" ") THEN
+             num_words:=num_words+1
+        END_IF 
+        IF (str[i]="a" or str[i]="i"  or str[i]="e"  or str[i]="u"  or str[i]="y" ) THEN
+           num_voyels:=num_voyels+1
+        END_IF
+       i:=i+1
+        
+    END_WHILE
+    Write("The number of voyels is ",num_voyels )
+    Write("The number of words is ",num_words )
+    Write("The length of yout sentence is ",i )
